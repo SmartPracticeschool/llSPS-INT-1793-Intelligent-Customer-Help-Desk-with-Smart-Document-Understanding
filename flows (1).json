@@ -1,0 +1,163 @@
+[
+    {
+        "id": "df2dfd54.c87f7",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "dd950266.b9191",
+        "type": "ui_form",
+        "z": "df2dfd54.c87f7",
+        "name": "",
+        "label": "",
+        "group": "fe4fd38a.9460a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Enter your input",
+                "value": "text",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "text": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 240,
+        "y": 320,
+        "wires": [
+            [
+                "b5648aab.dd0ea8"
+            ]
+        ]
+    },
+    {
+        "id": "b5648aab.dd0ea8",
+        "type": "function",
+        "z": "df2dfd54.c87f7",
+        "name": "",
+        "func": "msg.payload=msg.payload.text\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "117723c4.e3aafc",
+                "220ea9df.332416"
+            ]
+        ]
+    },
+    {
+        "id": "29d2c28c.a9196e",
+        "type": "function",
+        "z": "df2dfd54.c87f7",
+        "name": "",
+        "func": "msg.payload=msg.payload.output.text[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 870,
+        "y": 200,
+        "wires": [
+            [
+                "7f2579ea.cb5478"
+            ]
+        ]
+    },
+    {
+        "id": "117723c4.e3aafc",
+        "type": "watson-conversation-v1",
+        "z": "df2dfd54.c87f7",
+        "name": "Customer Care",
+        "workspaceid": "f1f3bb87-d962-4c9b-87f7-b49d6cab539e",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/eeb79120-927f-4b50-9d18-8391fcc0d0fd",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "fa5a802.2ea968",
+                "29d2c28c.a9196e"
+            ]
+        ]
+    },
+    {
+        "id": "220ea9df.332416",
+        "type": "ui_text",
+        "z": "df2dfd54.c87f7",
+        "group": "fe4fd38a.9460a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "You",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 570,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7f2579ea.cb5478",
+        "type": "ui_text",
+        "z": "df2dfd54.c87f7",
+        "group": "fe4fd38a.9460a",
+        "order": 3,
+        "width": 13,
+        "height": 6,
+        "name": "",
+        "label": "Bot",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 970,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fa5a802.2ea968",
+        "type": "debug",
+        "z": "df2dfd54.c87f7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 880,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "fe4fd38a.9460a",
+        "type": "ui_group",
+        "z": "",
+        "name": "CHATBOT",
+        "tab": "1bff366.44c80ca",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "1bff366.44c80ca",
+        "type": "ui_tab",
+        "z": "",
+        "name": "CUSTOMER CARE HELPDESK",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
