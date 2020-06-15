@@ -12,6 +12,8 @@ To take it a step further, the project shall use the Smart Document Understandin
 
 In Watson Discovery I have used the ecobee3_userguide.
 
-Node-Red Dashboard link after deploying : https://node-red-czakp.eu-gb.mybluemix.net/ui/#!/0?socketid=ZE_reNWWbHjru7TaAAAz
+Node-Red Dashboard link after deploying : https://node-red-aqvch.eu-gb.mybluemix.net/ui/#!/0?socketid=ccOvQo5jZ0p4hETuAAAA
 
-Youtube video link is : https://www.youtube.com/watch?v=AAzGiSkcbUY&t=54s
+Youtube video links : https://www.youtube.com/watch?v=AAzGiSkcbUY&t=54s
+                      https://youtu.be/7FzXYgQdVbs
+
