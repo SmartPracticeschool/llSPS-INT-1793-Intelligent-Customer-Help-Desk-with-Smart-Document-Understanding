@@ -1,0 +1,56 @@
+[
+    {
+        "id": "7b2d556d.c7e28c",
+        "type": "ui_form",
+        "z": "f4a29a78.dab338",
+        "name": "",
+        "label": "",
+        "group": "fdad01ae.385d5",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "options": [
+            {
+                "label": "Enter your input",
+                "value": "text",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "text": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "5f18d528.6a0f6c"
+            ]
+        ]
+    },
+    {
+        "id": "fdad01ae.385d5",
+        "type": "ui_group",
+        "z": "",
+        "name": "CHATBOT",
+        "tab": "ada49baa.35b338",
+        "order": 1,
+        "disp": true,
+        "width": 15,
+        "collapse": false
+    },
+    {
+        "id": "ada49baa.35b338",
+        "type": "ui_tab",
+        "z": "",
+        "name": "CUSTOMER CARE HELPDESK",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
